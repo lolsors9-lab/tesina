@@ -109,3 +109,29 @@ window.addEventListener("mousemove", (e) => {
   glow.style.top = e.clientY + "px";
 
 });
+<script>
+const cursor = document.querySelector(".custom-cursor");
+
+document.addEventListener("mousemove", (e) => {
+
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+
+});
+
+/* effetto hover */
+
+const hoverElements = document.querySelectorAll("a, button, .btn, .card");
+
+hoverElements.forEach(el => {
+
+  el.addEventListener("mouseenter", () => {
+    cursor.classList.add("hover");
+  });
+
+  el.addEventListener("mouseleave", () => {
+    cursor.classList.remove("hover");
+  });
+
+});
+</script>
