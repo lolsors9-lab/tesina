@@ -455,11 +455,7 @@ footer{
     );
 
   z-index:-1;
-
-  will-change:transform;
 }
-
-/* CUSTOM CURSOR */
 
 /* CUSTOM CURSOR */
 
@@ -491,10 +487,9 @@ footer{
     width .2s ease,
     height .2s ease,
     transform .05s linear;
-
 }
 
-/* HOVER EFFECT */
+/* HOVER CURSOR */
 
 .custom-cursor.hover{
   width:40px;
