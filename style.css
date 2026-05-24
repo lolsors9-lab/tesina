@@ -461,73 +461,46 @@ footer{
 
 /* CUSTOM CURSOR */
 
-.custom-cursor{
-  width:18px;
-  height:18px;
+/* CUSTOM CURSOR */
 
+.custom-cursor{
   position:fixed;
   top:0;
   left:0;
 
-  border:2px solid cyan;
+  width:18px;
+  height:18px;
+
+  background:#00ffff;
+
+  border:2px solid white;
   border-radius:50%;
 
   pointer-events:none;
 
   transform:translate(-50%, -50%);
 
-  z-index:99999;
-
-  backdrop-filter:blur(2px);
-
-  will-change:transform;
-
-  transition:
-    width 0.2s ease,
-    height 0.2s ease,
-    background 0.2s ease;
+  z-index:999999999;
 
   box-shadow:
-    0 0 10px cyan,
-    0 0 20px cyan,
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
     0 0 40px rgba(0,255,255,0.8);
-}
 
-.custom-cursor::before{
-  content:"";
-
-  position:absolute;
-
-  inset:-10px;
-
-  border-radius:50%;
-
-  border:1px solid rgba(0,255,255,0.3);
-
-  animation:pulseCursor 2s infinite;
-}
-
-@keyframes pulseCursor{
-
-  0%{
-    transform:scale(1);
-    opacity:1;
-  }
-
-  100%{
-    transform:scale(1.8);
-    opacity:0;
-  }
+  transition:
+    width .2s ease,
+    height .2s ease,
+    transform .05s linear;
 
 }
+
+/* HOVER EFFECT */
 
 .custom-cursor.hover{
   width:40px;
   height:40px;
 
-  background:rgba(0,255,255,0.15);
-
-  mix-blend-mode:screen;
+  background:rgba(0,255,255,0.2);
 }
 
 /* RESPONSIVE */
