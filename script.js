@@ -114,12 +114,16 @@ window.addEventListener("mousemove", (e) => {
 
 const cursor = document.querySelector(".custom-cursor");
 
-document.addEventListener("mousemove", (e) => {
+if (cursor) {
 
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
+  window.addEventListener("mousemove", (e) => {
 
-});
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+
+  });
+
+}
 
 // HOVER EFFECT
 
