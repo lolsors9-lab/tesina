@@ -109,7 +109,9 @@ window.addEventListener("mousemove", (e) => {
   glow.style.top = e.clientY + "px";
 
 });
-<script>
+
+// CUSTOM CURSOR
+
 const cursor = document.querySelector(".custom-cursor");
 
 document.addEventListener("mousemove", (e) => {
@@ -119,9 +121,11 @@ document.addEventListener("mousemove", (e) => {
 
 });
 
-/* effetto hover */
+// HOVER EFFECT
 
-const hoverElements = document.querySelectorAll("a, button, .btn, .card");
+const hoverElements = document.querySelectorAll(
+  "a, button, .btn, .card"
+);
 
 hoverElements.forEach(el => {
 
@@ -134,4 +138,3 @@ hoverElements.forEach(el => {
   });
 
 });
-</script>
