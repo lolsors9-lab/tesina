@@ -435,3 +435,60 @@ footer{
   .section-title{ font-size: 1.9rem; }
   .btn{ padding: 12px 30px; font-size: 0.95rem; }
 }
+/* TITOLO HERO - Neon morbido e leggibile */
+.main-title {
+  font-size: 6.5rem;
+  font-weight: 900;
+  color: #00ffff;
+  text-shadow: 
+    0 0 12px #00ffff,
+    0 0 25px #00ffff,
+    0 0 45px rgba(0, 255, 255, 0.6);
+  letter-spacing: 4px;
+  position: relative;
+  margin-bottom: 25px;
+  line-height: 1.05;
+}
+
+.main-title .logo-symbol {
+  position: absolute;
+  font-size: 4.8rem;
+  color: #ff00ff;
+  top: -32px;
+  right: -85px;
+  text-shadow: 0 0 25px #ff00ff;
+  opacity: 0.85;
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
+
+.hero p {
+  color: #eee;
+  font-size: 1.35rem;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+  margin-top: 15px;
+}
+
+/* Glitch leggero */
+.main-title.glitch::before,
+.main-title.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.main-title.glitch::before {
+  color: #ff00ff;
+  z-index: -1;
+  animation: glitchTop 1s infinite;
+  opacity: 0.75;
+}
+
+.main-title.glitch::after {
+  color: #00ffff;
+  z-index: -2;
+  animation: glitchBottom 1.4s infinite;
+  opacity: 0.75;
+}
