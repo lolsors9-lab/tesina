@@ -116,6 +116,146 @@
   </section>
 
   <!-- MATERIE -->
+  <h2 class="section-title">COLLEGAMENTI</h2>
+
+    <div class="mappa-container" data-aos="fade-up">
+      
+      <div class="nodo-centrale glitch" data-text="L'IMPORTANZA DELLE DONNE">
+        <span>L'importanza delle donne</span>
+      </div>
+
+      <div class="nodo-satellite n-inglese">
+        <div class="sub">INGLESE</div>
+        <p>Billie Eilish<br>vita e successi</p>
+      </div>
+
+      <div class="nodo-satellite n-musica">
+        <div class="sub">MUSICA</div>
+        <p>Billie Eilish e<br>la pop music</p>
+      </div>
+
+      <div class="nodo-satellite n-arte">
+        <div class="sub">ARTE</div>
+        <p>Frida Kahlo</p>
+      </div>
+
+      <div class="nodo-satellite n-scienze">
+        <div class="sub">SCIENZE</div>
+        <p>Marie Curie</p>
+      </div>
+
+      <div class="nodo-satellite n-storia">
+        <div class="sub">STORIA</div>
+        <p>le donne nelle<br>guerre mondiali</p>
+      </div>
+
+    </div>
+    ```
+
+---
+
+### 🎨 Codice CSS da aggiungere
+Incolla questo codice in fondo al tuo file `style.css`. Crea una disposizione a raggiera moderna e responsiva che riprende i tuoi stessi colori `#00ffff` (cyan) e `#ff00ff` (magenta):
+
+```css
+/* --- STILE MAPPA CONCETTUALE CYBERPUNK --- */
+
+.mappa-container {
+  position: relative;
+  width: 100%;
+  min-height: 550px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Nodo Centrale (La Nuvola del tuo disegno, ma in stile Cyber) */
+.nodo-centrale {
+  background: rgba(5, 8, 22, 0.9);
+  border: 3px solid #ff00ff;
+  border-radius: 50px;
+  padding: 25px 40px;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 0 0 20px #ff00ff, inset 0 0 15px rgba(255, 0, 255, 0.4);
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.nodo-centrale span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+.nodo-centrale:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #ff00ff, inset 0 0 25px rgba(255, 0, 255, 0.6);
+}
+
+/* Nodi Satelliti (Le nuvole esterne) */
+.nodo-satellite {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 15px 25px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  min-width: 200px;
+  transition: 0.4s ease;
+}
+
+.nodo-satellite:hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+  transform: translateY(-5px);
+}
+
+.nodo-satellite .sub {
+  font-size: 0.8rem;
+  color: #00ffff;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.nodo-satellite p {
+  font-size: 0.9rem;
+  color: #bbb;
+  line-height: 1.3;
+}
+
+/* Posizionamento assoluto per Desktop (Raggiera intorno al centro) */
+.n-inglese { top: 10%; left: 10%; }
+.n-musica  { bottom: 15%; left: 10%; }
+.n-arte    { bottom: 5%; left: 50%; transform: translateX(-50%); }
+.n-scienze { top: 10%; right: 10%; }
+.n-storia  { bottom: 15%; right: 10%; }
+
+/* Fix per Hover su Arte causa del transform di centramento */
+.n-arte:hover {
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* RESPONSIVE: sui telefoni i nodi si incolonnano ordinati senza sovrapporsi */
+@media (max-width: 992px) {
+  .mappa-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: auto;
+  }
+  .nodo-satellite {
+    position: static;
+    width: 80%;
+    transform: none !important;
+  }
+}
   <section class="container" id="materie">
 
     <h2 class="section-title">COLLEGAMENTI</h2>
