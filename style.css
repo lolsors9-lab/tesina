@@ -612,15 +612,15 @@ footer{
   line-height: 1.3;
 }
 
-/* Posizionamento assoluto per Desktop */
-.n-inglese { top: 12%; left: 5%; }
-.n-musica  { bottom: 15%; left: 5%; }
-.n-arte    { bottom: 5%; left: 50%; transform: translateX(-50%); }
-.n-scienze { top: 12%; right: 5%; }
-.n-storia  { bottom: 15%; right: 5%; }
+/* Posizionamento assoluto per Desktop mappato sulle tue materie */
+.n-italiano  { top: 12%; left: 5%; }
+.n-storia    { bottom: 15%; left: 5%; }
+.n-geografia { bottom: 5%; left: 50%; transform: translateX(-50%); }
+.n-inglese   { top: 12%; right: 5%; }
+.n-arte      { bottom: 15%; right: 5%; }
 
-/* Fix per Hover su Arte causa del transform di centramento */
-.n-arte:hover {
+/* Fix per Hover su Geografia causa del transform di centramento */
+.n-geografia:hover {
   transform: translateX(-50%) translateY(-5px);
 }
 
